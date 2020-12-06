@@ -1,0 +1,79 @@
+<link href='https://dreamland235.github.io/dreamland/css/mediaelementplayer.css' rel='stylesheet'/>
+   <link rel="stylesheet" href="https://dreamland235.github.io/dreamland/css/mep-feature-playlist.css">
+    <link rel="stylesheet" href="https://dreamland235.github.io/dreamland/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="https://dreamland235.github.io/dreamland/css/mate.min.css">
+    <link rel="stylesheet" href="https://dreamland235.github.io/dreamland/css/radio.css">
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://dreamland235.github.io/dreamland/js/mediaelement-and-player.min.js"></script>
+    <script src="https://dreamland235.github.io/dreamland/js/mep-feature-playlist.js"></script>
+	
+
+	
+<style type='text/css'>   
+    .mejs__playlist {
+    max-height: 300px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+    }
+    
+ </style>   
+
+<div id='left' style="background:#000000!important;">
+<video height="264" class="mediaElementPlaylist" data-showplaylist="true" data-alwaysShowControls="true" src="" preload="none" controls autoplay">
+  <source src='https://pjoshi.imfast.io/Mahishasur%20Mardini%20Strotra.mp4' title='Mahishasur Mardini Strotra' type='audio/mp3'/>
+  
+        <source src='https://pjoshi.imfast.io/dhire%20dhire%20subah.mp3' title='Dhire Dhire Subah Huyi' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/bin_phere_hum_tere.mp3' title='Bin Phere Hum Tere' type='audio/mp3'/>
+        
+	<source src="https://www.youtube.com/watch?v=sYTic2RGRVo" type="audio/mp3" title="Rote Huye Aate He Sab- Jatin Joshi">
+        <source src="https://www.youtube.com/watch?v=YLZ2ZcrJcHI?t=10" type="audio/mp3" title="Kishor Kumar's Medley- Jatin Joshi">
+        <source src='https://pjoshi.imfast.io/dil%20ke%20tukade.mp4' title='Dil Ke Tukade' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/hosh%20valo.mp3' title='Hosh Valo Ko Khabar' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/chandi%20jaisa%20rang%20hai%20tera.mp3' title='Chandi Jaisa Rang Hai Tera' type='audio/mp3'/>
+        
+        <source src='https://pjoshi.imfast.io/ka%20karu%20sajni.mp3' title='Ka Karu Sajani' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/kabhi%20kisiko%20mukammal%20jaha.mp3' title='Kabhi Kisiko Mukammal' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/lagi%20aaj%20savan%20ki.mp3' title='Lagi Aaj Savan Ki Fir Vo' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/madhuban%20khusboo.mp3' title='Madhuban Khusboo Deta Hai' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/na%20kajre%20ki%20dhar%20pjoshi.mp3' title='Na Kajre Ki Dhaar' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/neela%20aasama%20pjoshi.mp3' title='Neela Aasma So Gaya' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/pyar%20hamara%20pjoshi.mp3' title='Pyar Hamara Amar Rahega' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/ram%20mere%20aa%20jao%20ram.mp3' title='Ram Mere Aa Jao' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/sawan%20ke%20suhane%20mausam%20me.mp3' title='Sawan Ke Suhane Mausam Me' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/radha%20ka%20bhi%20shyam.mp3' title='Shyam Teri Bansi' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/tere%20mere%20bichj%20pjoshi.mp3' title='Tere Mere Bich Me' type='audio/mp3'/>
+        <source src='https://pjoshi.imfast.io/shiv%20tandav%20pjoshi235.mp3' title='Shiv Tandav Strotra' type='audio/mp3'/>
+  
+  </video>
+  
+  </div>
+  <div class="radio1" style="padding: 5px 0 5px 0; margin-top: 5px;">
+  <a href="https://pjoshifiles.blogspot.com/2020/10/music.html">Music Home</a>
+  </div>
+  
+  
+<script>
+if ($.fn.mediaelementplayer) {
+            $('audio.mediaElementPlaylist').mediaelementplayer({
+                audioWidth: '100%',
+                alwaysShowControls: true,
+                error: function (media, node) {
+                    $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
+                },
+                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'playlist']
+            });
+
+            $('video.mediaElementPlaylist').mediaelementplayer({
+                stretching: 'responsive',
+                playlistposition: 'bottom',
+                alwaysShowControls: true,
+                alwaysShowPlaylist: true,
+                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'playlist']
+            });
+        }
+</script>	                                                                                           
+                                                                                                                                                                        
+                                                                                           
