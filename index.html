@@ -1,5 +1,5 @@
-
-
+<html>
+<head>
 <style type="text/css">
 .post-title.entry-title, .header, #top1, #topsection, #headline-wrapper, #headline, #rightcolumn, #footer, #menu {height:0px !important; width:0px !important; visibility: hidden; display:none;}
 #maincontainer,  #contentwrapper, #contentcolumn {width: 840px !important;background: #000000 !important; overflow-x:hidden; overflow-y:auto; }
@@ -26,8 +26,10 @@
   
   
     </style>
+</head>	
+<body>
 <div id="container" style="max-height:470px; height:470px; overflow:hidden !important;">
-
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 <div style='width:100%;height:250px;  background: #000000 url(https://live.staticflickr.com//65535//48657674886_d26b99c4cd_o.png) no-repeat center top; background-size: 250px 250px;'>
 </div>
 
@@ -37,37 +39,65 @@
 <!-- Begin
 
 /* This script and many more are available free online at
+
 The JavaScript Source!! http://javascript.internet.com
+
 Created by: HaganeNoKokoro :: http://tinyurl.com/buvp9 */
 
 /*
+
  * Notes on hue
+
  *
+
  * This script uses hue rotation in the following manner:
+
  * hue=0   is red (#FF0000)
+
  * hue=60  is yellow (#FFFF00)
+
  * hue=120 is green (#00FF00)
+
  * hue=180 is cyan (#00FFFF)
+
  * hue=240 is blue (#0000FF)
+
  * hue=300 is magenta (#FF00FF)
+
  * hue=360 is hue=0 (#FF0000)
+
  *
+
  * Notes on the script
+
  *
+
  * This script should function in any browser that supports document.getElementById
+
  * It has been tested in Netscape7, Mozilla Firefox 1.0, and Internet Explorer 6
+
  *
+
  * Accessibility
+
  *
+
  * The script does not write the string out, but rather takes it from an existing
+
  * HTML element. Therefore, users with javascript disabled will not be adverely affected.
+
  * They just won't get the pretty colors.
+
  */
 
 /*
+
  * splits par.firstChild.data into 1 span for each letter
+
  * ARGUMENTS
+
  *   span - HTML element containing a text node as the only element
+
  */
 
 function toSpans(span) {
@@ -91,15 +121,25 @@ function toSpans(span) {
 }
 
 /*
+
  * creates a rainbowspan object
+
  * whose letters will be colored [deg] degrees of hue
+
  * ARGUMENTS
+
  *   span - HTML element to apply the effect to (text only, no HTML)
+
  *   hue - what degree of hue to start at (0-359)
+
  *   deg - how many hue degrees should be traversed from beginning to end of the string (360 => once around, 720 => twice, etc)
+
  *   brt - brightness (0-255, 0 => black, 255 => full color)
+
  *   spd - how many ms between moveRainbow calls (less => faster)
+
  *   hspd - how many hue degrees to move every time moveRainbow is called (0-359, closer to 180 => faster)
+
  */
 
 function RainbowSpan(span, hue, deg, brt, spd, hspd) {
@@ -129,9 +169,13 @@ function RainbowSpan(span, hue, deg, brt, spd, hspd) {
 }
 
 /*
+
  * sets the colors of the children of [this] as a hue-rotating rainbow starting at this.hue;
+
  * requires something to manage ch externally
+
  * I had to make the RainbowSpan class because M$IE wouldn't let me attach this prototype to [Object]
+
  */
 
 RainbowSpan.prototype.moveRainbow = function() {
@@ -188,13 +232,31 @@ RainbowSpan.prototype.moveRainbow = function() {
 <div align=center>
  <script language="Javascript">
     document.write("<div id=r1>");  
-    document.write("Welcome to our visitors");  
-   
+    document.write("Welcome to our visitors from: ");  
+    document.write(" "+geoplugin_city()+", "+geoplugin_countryName()); 
     document.write("</div>"); 
 </script>
  
 
  
+  <script language="Javascript">
+    document.write("<div id=r2>"); 
+    document.write("Your ip address is: "); 
+    document.write(" "+geoplugin_request()+" "); 
+    document.write("</div>"); 
+ </script>
+ 
+ 
+ 
+ 
+  <script language="Javascript">
+    document.write("<div id=r3>"); 
+   
+    document.write("Your longitude & Latitude: "); 
+	document.write(" "+geoplugin_longitude()+" & "+geoplugin_latitude()); 
+     
+    document.write("</div>"); 
+ </script>
  
  
  
@@ -210,6 +272,40 @@ var myRainbowSpan=new RainbowSpan(r1, 0, 360, 255, 50, 348); //apply static rain
 myRainbowSpan.timer=window.setInterval("myRainbowSpan.moveRainbow()", myRainbowSpan.speed);
 
 </script>
+
+
+
+
+<script type=text/javascript>
+
+var r2=document.getElementById("r2"); //get span to apply rainbow
+
+var myRainbowSpan2=new RainbowSpan(r2, 0, 360, 255, 50, 348); //apply static rainbow effect
+
+myRainbowSpan2.timer=window.setInterval("myRainbowSpan2.moveRainbow()", myRainbowSpan2.speed);
+
+</script>
+
+
+
+
+
+<script type=text/javascript>
+
+var r3=document.getElementById("r3"); //get span to apply rainbow
+
+var myRainbowSpan3=new RainbowSpan(r3, 0, 360, 255, 50, 18) //apply static rainbow effect
+
+myRainbowSpan3.timer=window.setInterval("myRainbowSpan3.moveRainbow()", myRainbowSpan3.speed);
+
+</script>
+
+
+
+
+
+
+
 
 <script language=javascript>
 
@@ -306,16 +402,6 @@ return false;
 
 <!-- STEP TWO: Copy this code into the BODY of your HTML document  -->
  </div>
-</div> </div> 
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+</div> </div> 	
+</body>	
+</html>	
